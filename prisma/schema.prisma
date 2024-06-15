@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+// prisma/schema.prisma
+datasource db {
+  provider  = "postgresql"
+  url  	    = env("DATABASE_URL")
+  // uncomment next line if you use Prisma <5.10
+  // directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+
+enum  Visibility {
+ Public
+ Private
+}
+
+model user {
+  id               String    @id @default(uuid())
+  userId           String    @unique
+  name             String
+  imageUrl         String    
+  email            String 
+  Banner           String
+
+  audio            audio[]
+  playlists        playlist[]
+  folders          folder[]
+
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+}
+
+model audio {
+  id               String    @id @default(uuid())
+  AudioUrl         String
+  Title            String
+  Thumbnail        String
+  Duration         Int 
+  Category         String
+  Author           String
+
+  userId           String    
+  user             user      @relation(fields: [userId], references: [userId])
+
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+}
+
+model playlist {
+  id               String    @id @default(uuid())
+  name             String
+  audio            String[]
+  folderId         String     
+  imageUrl         String
+  Visibility       Visibility @default(Private)
+
+  userId           String    
+  user             user      @relation(fields: [userId], references: [userId])
+
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+}
+
+model folder {
+  id               String    @id @default(uuid())
+  name             String
+  audio            String[]
+  folderId         String    
+
+  userId           String    @db.Text
+  user             user      @relation(fields: [userId], references: [userId])
+
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+}
