@@ -2,7 +2,7 @@
   <br />
   <!-- TODO: change -->
     <a href="https://youtu.be/PuOVqP_cjkE?feature=shared" target="_blank">
-      <img src="https://github.com/BensonRaro/Nextjs_SpotifyClone/public/SpotifyClonebanner.jpg" alt="Project Banner">
+      <img src="https://github.com/BensonRaro/Nextjs_SpotifyClone/blob/main/public/SpotifyClonebanner.jpg?raw=true" alt="Project Banner">
     </a>
   <br />
   
