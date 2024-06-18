@@ -177,8 +177,9 @@ const Menu = ({
                             onClick={() =>
                               AddAudioToPlaylist(list.id, list.name, list.audio)
                             }
+                            key={list.id}
                           >
-                            <CommandItem disabled={isPending} key={list.id}>
+                            <CommandItem disabled={isPending}>
                               {list.name}
                             </CommandItem>
                           </div>
