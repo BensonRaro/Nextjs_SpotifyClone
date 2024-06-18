@@ -21,7 +21,7 @@ export const AddAudio = async (
   const AudioList = playlists
     ?.filter((playlist) => playlist.id === playlistId)
     .flatMap((a) => a.audio)
-    .concat(audio);
+    .concat(audio || []);
 
   try {
     const newPlaylist = await db.playlist.update({
