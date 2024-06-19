@@ -39,7 +39,11 @@ const PlaylistClient = ({
 
   const OpenDialog = () => {
     //   TODO:Fix this
-    if (playlist?.Visibility === "Private" && user?.id === playlist?.userId) {
+    if (
+      playlist?.Visibility === "Private" &&
+      user?.id === playlist?.userId &&
+      playlist?.folderId !== "Liked Songs"
+    ) {
       setOpen(true);
     }
   };
