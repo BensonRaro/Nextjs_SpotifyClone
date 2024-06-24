@@ -22,7 +22,7 @@
 
 ## 🚨 Tutorial
 
-## Watch: <a href="https://youtu.be/PuOVqP_cjkE?feature=shared" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
+## Watch: <a href="https://www.youtube.com/watch?v=j3gRSxB5OVg&t=975s" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
 
 This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@BensonRaro/videos" target="_blank"><b>Benson Raro</b></a>.
 
